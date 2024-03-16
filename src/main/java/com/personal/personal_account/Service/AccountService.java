@@ -14,7 +14,7 @@ public class AccountService {
     public User getUserInfo(Long id){
         log.info("User getting personal info");
         Optional<User> user = userRepository.findById(id);
-        if(user.isPresent()){
+        if(!user.isPresent()){
             log.error("User not found");
             throw new UsernameNotFoundException("User not found");
         }
