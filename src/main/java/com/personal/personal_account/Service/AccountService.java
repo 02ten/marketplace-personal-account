@@ -12,11 +12,13 @@ import java.util.Optional;
 public class AccountService {
     private final UserRepository userRepository;
     public User getUserInfo(Long id){
+        log.info("User getting personal info");
         Optional<User> user = userRepository.findById(id);
         if(user.isPresent()){
             log.error("User not found");
             throw new UsernameNotFoundException("User not found");
         }
+        log.info("Successful getting info");
         return user.get();
     }
 
