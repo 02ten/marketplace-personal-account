@@ -50,7 +50,7 @@ jobs:
       - name: Update yaml
         working-directory: ./marketplace-k8s-config
         run: |
-          sed -i 's/image: 02ten\/marketplace-personal-account:.*/image: 02ten\/marketplace-personal-account:${{ github.sha }}/g' application/personal-account/personal-account.yaml
+          sed -i 's/image: 02ten\/marketplace-personal-account:.*/image: 02ten\/marketplace-personal-account:${{ github.sha }}/g' application/personal-account-service/personal-account.yaml
           git config --global user.email "89169604848t@gmail.com"
           git config --global user.name "02ten"
           git add .
