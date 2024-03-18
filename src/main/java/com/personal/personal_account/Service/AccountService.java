@@ -5,10 +5,12 @@ import com.personal.personal_account.Repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 @Log4j
 @RequiredArgsConstructor
+@Service
 public class AccountService {
     private final UserRepository userRepository;
     public User getUserInfo(Long id){
