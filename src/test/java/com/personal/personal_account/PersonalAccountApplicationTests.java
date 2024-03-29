@@ -33,7 +33,7 @@ class PersonalAccountApplicationTests {
                 roles)));
 
         User user = accountService.getUserInfo(id);
-        Assertions.assertTrue(new ReflectionEquals(new User(id, "02ten", "12345", "Alexander", "Ten",
+        Assertions.assertTrue(new ReflectionEquals(new User(id, "02ten", null, "Alexander", "Ten",
                 roles)).matches(user));
     }
 }
