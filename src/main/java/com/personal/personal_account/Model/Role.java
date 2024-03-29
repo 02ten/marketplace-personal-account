@@ -1,12 +1,13 @@
 package com.personal.personal_account.Model;
 
 import jakarta.persistence.*;
-import org.springframework.security.core.GrantedAuthority;
+import lombok.Getter;
 
 import java.util.Set;
 
 @Entity
-public class Role implements GrantedAuthority {
+@Getter
+public class Role {
     private String vale;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,10 +24,4 @@ public class Role implements GrantedAuthority {
     public Role(){
 
     }
-
-    @Override
-    public String getAuthority() {
-        return vale;
-    }
-
 }
